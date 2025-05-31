@@ -3,7 +3,7 @@
 #define GameModuleBase (reinterpret_cast<uintptr_t>(GetModuleHandleA("RobloxPlayerBeta.exe")))
 
 int ExecutePrints() {
-    uintptr_t printaddy = GameModuleBase + 0x1546970; // roblox offset
+    uintptr_t printaddy = GameModuleBase + 0x15469F0; // roblox offset
     using PrintFunc = int(__fastcall*)(int, const char*, ...);
     auto PrintMessage = reinterpret_cast<PrintFunc>(printaddy);
 
